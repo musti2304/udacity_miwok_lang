@@ -10,13 +10,13 @@
         android:id="@+id/miwok_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="lutti"
+        tools:text="miwok word"
         />
 
     <TextView
         android:id="@+id/default_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="one"/>
+        tools:text="english word"/>
 
 </LinearLayout>
