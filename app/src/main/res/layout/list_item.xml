@@ -3,15 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:background="@color/tan_background"
 
     android:minHeight="@dimen/list_item_height"
-    android:background="@color/tan_background">
+    android:orientation="horizontal">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="@dimen/list_item_height"
-        android:layout_height="@dimen/list_item_height" />
+        android:layout_height="@dimen/list_item_height"
+        tools:src="@drawable/family_grandfather"/>
 
     <LinearLayout
         android:id="@+id/text_container"
@@ -19,8 +20,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingLeft="16dp"
-        android:background="@color/category_numbers"
-        >
+        tools:background="@color/category_numbers">
 
         <TextView
             android:id="@+id/miwok_text_view"
