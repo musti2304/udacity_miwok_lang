@@ -23,16 +23,21 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView numbers;
+    TextView family;
+    TextView colors;
+    TextView phrases;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        TextView numbers = (TextView) findViewById(R.id.numbers);
-        TextView family =  (TextView) findViewById(R.id.family);
-        TextView colors =  (TextView) findViewById(R.id.colors);
-        TextView phrases =  (TextView) findViewById(R.id.phrases);
+        numbers = (TextView) findViewById(R.id.numbers);
+        family =  (TextView) findViewById(R.id.family);
+        colors =  (TextView) findViewById(R.id.colors);
+        phrases =  (TextView) findViewById(R.id.phrases);
 
         numbers.setOnClickListener(new View.OnClickListener() {
             @Override

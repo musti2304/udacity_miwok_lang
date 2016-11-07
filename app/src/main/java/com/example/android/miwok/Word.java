@@ -8,26 +8,22 @@ public class Word {
 
     private String mDefaultTranslation;
     private String mMiwokTranslation;
+    private int mAudioResourceId;
     private int mImageResourceId = NO_IMAGE_PROVIDED;
-    private int mColorResourceId;
+
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioResourceId) {
         this.mDefaultTranslation = defaultTranslation;
         this.mMiwokTranslation = miwokTranslation;
+        this.mAudioResourceId = audioResourceId;
     }
 
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int audioResourceId) {
         this.mDefaultTranslation = defaultTranslation;
         this.mMiwokTranslation = miwokTranslation;
         this.mImageResourceId = imageResourceId;
-    }
-
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int colorResourceId) {
-        this.mDefaultTranslation = defaultTranslation;
-        this.mMiwokTranslation = miwokTranslation;
-        this.mImageResourceId = imageResourceId;
-        this.mColorResourceId = colorResourceId;
+        this.mAudioResourceId = audioResourceId;
     }
 
 
@@ -43,9 +39,19 @@ public class Word {
         return mImageResourceId;
     }
 
-    public int getColorResourceId() { return mColorResourceId; }
+    public int getAudioResourceId() { return mAudioResourceId; }
 
     public boolean hasImage(){
         return mImageResourceId != NO_IMAGE_PROVIDED;
+    }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mAudioResourceId=" + mAudioResourceId +
+                ", mImageResourceId=" + mImageResourceId +
+                '}';
     }
 }
